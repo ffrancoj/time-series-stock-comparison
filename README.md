@@ -1,2 +1,2 @@
-# time-series-stock-comparison
-More to come
+# Comparison of stock time series data 
+...
