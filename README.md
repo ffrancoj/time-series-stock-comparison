@@ -16,8 +16,8 @@ Concretely, we want to calculate correlations of stocks in different time scales
 
 For installation and configuration of AWS CLI and Pegasus, please follow the websites:
 
-* [Pegasus installation and Instructions](https://github.com/InsightDataScience/pegasus)
-* [AWS useful information](https://github.com/InsightDataScience/data-engineering-ecosystem/wiki/aws)
+* [Pegasus installation and instructions](https://github.com/InsightDataScience/pegasus)
+* [AWS information and instructions](https://github.com/InsightDataScience/data-engineering-ecosystem/wiki/aws)
 
 #### CLUSTER STRUCTURE
 
