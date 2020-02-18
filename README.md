@@ -10,13 +10,23 @@ Concretely, we want to calculate correlations of stocks in different time scales
 
 ## Pipeline 
 
-
-### Data source
+![Pipeline](https://github.com/ffrancoj/time-series-stock-comparison/blob/develop/docs/pipeline.png)
 
 ### Environment setup
 
-## Running the program
+For installation and configuration of AWS CLI and Pegasus, please follow the websites:
 
-### Batch job
+* [Pegasus installation and Instructions](https://github.com/InsightDataScience/pegasus)
+* [AWS useful information](https://github.com/InsightDataScience/data-engineering-ecosystem/wiki/aws)
+
+#### CLUSTER STRUCTURE
+
+To reproduce this particular environment, we need 5 m4.large AWS EC2 instances are needed, 4 nodes for the Spark Cluster, and 1 node for Database, as well as 1 t2.micro AWS EC2 instance for the webserver. 
+
+##### PostgreSQL setup
+
+
+
+
 
 
