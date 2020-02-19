@@ -1,0 +1,9 @@
+##To run a spark (batch) job from the command line, the format is a follows:
+
+
+spark-submit —-master spark://ec2-##-###-##-####.compute-1.amazonaws.com:7077 \
+	      -—jars /home/ubuntu/postgresql-42.2.9.jar \
+		### more configuration options possible	
+	       your_python_code.py 
+
+## In this example we’re uploading into a database in postgres

@@ -1,0 +1,62 @@
+######
+# This setup installs a PostgreSQL (here postgresql 9.3) on a newly-created Ubuntu EC2 machine
+######
+
+######
+# MANUAL SETUP
+#######
+# ssh #
+#######
+# if you are in the folder where your pem file is, you can run the below directly
+# where NAME-IAM-keypair is your pem file name
+# ssh -i “NAME-IAM-keypair.pem" ubuntu@ec2-##-###-##-####.compute-1.amazonaws.com
+# If not in folder with .pem, just specify full path to pem e.g. ~/.ssh/NAME-IAM-keypair.pem
+
+######
+# INSTALL 
+######
+sudo apt update
+#install postgres as a service, configured at /etc/init.d
+sudo apt install postgresql postgresql-contrib  -y
+
+sudo service postgresql start
+
+
+#Configure postgres
+cd /etc/postgresql/9.3/main
+
+#Edit postgres config files : postgresql.conf and pg_hba.conf
+
+## you may need permission first
+sudo chmod 777 pg_hba.conf
+sudo chmod 777 postgresql.conf
+
+#This exposes Postgres as a service
+echo "listen_addresses = '*'"  >> postgresql.conf 
+
+#By default, the superuser postgres can be used only by peer authentication. 
+#To expose it as an external service and allow all client connections without authentication, add the following lines to pg_hba.conf. 
+
+echo "hostssl all all all trust" >> pg_hba.conf
+
+## The lines follows the format
+#hostssl       database  user  address  auth-method  [auth-options]
+
+# Add to /etc/postgresql/9.3/main/pg_hba.conf
+host all all 0.0.0.0/0 md5
+host all all ::/0 md5
+
+#changes to .conf files require service restart
+sudo service postgresql restart
+
+#The line below will  log you in as postgres user and open up PSQL interface
+sudo -u postgres psql
+
+
+############# Execute the following under postgres user ###############
+##### Choose NAME_USER, NAME_DB, NAME_PWD then
+#postgres=# CREATE DATABASE NAME_DB;
+#postgres=# CREATE USER NAME_USER WITH PASSWORD NAME_PWD;
+#postgres=# GRANT ALL PRIVILEGES ON DATABASE NAME_DB TO NAME_USER;
+#postgres=# ALTER USER NAME_USER CREATEDB;
+
