@@ -22,9 +22,17 @@ For installation and configuration of AWS CLI and Pegasus, please follow the web
 
 To reproduce this particular environment, we need 5 m4.large AWS EC2 instances are needed, 4 nodes for the Spark Cluster, and 1 node for Database, as well as 1 t2.micro AWS EC2 instance for the webserver. 
 
+For detailed configuration instructions, refer to the `docs/spark_install.txt` file
+
 #### PostgreSQL setup
 
 For installation and configuration, please refer to the `docs/postgres_install.txt` file
+
+#### Webserver setup 
+
+For installation and configuration, refer to: [create an EC2 instance and install a web server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateWebServer.html)
+
+###
 
 
 
