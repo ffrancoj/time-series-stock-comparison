@@ -1,5 +1,5 @@
 # Comparing stocks across time 
-> Learning from history 
+> Learning from history to gain insight
 
 This project has been completed as part of the Insight Data Engineering Program (NYC, Winter 2020). 
 
