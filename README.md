@@ -24,6 +24,8 @@ To reproduce this particular environment, we need 5 m4.large AWS EC2 instances a
 
 #### PostgreSQL setup
 
+For installation and configuration, please refer to the `docs/postgres_install.txt` file
+
 
 
 
