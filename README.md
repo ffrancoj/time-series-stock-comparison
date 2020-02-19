@@ -19,9 +19,45 @@ For installation and configuration of AWS CLI and Pegasus, please follow the web
 * [Pegasus installation and instructions](https://github.com/InsightDataScience/pegasus)
 * [AWS information and instructions](https://github.com/InsightDataScience/data-engineering-ecosystem/wiki/aws)
 
-#### CLUSTER STRUCTURE
+#### Cluster structure
 
 To reproduce this particular environment, we need five m4.large AWS EC2 instances are needed, four nodes for the Spark Cluster, and one node for Database, as well as one t2.micro AWS EC2 instance for the webserver. 
+
+Start a cluster with Pegasus and configure the master and workers yaml files under ./vars/spark_cluster. For example, in the cluster named ```spark-cluster``` edit the master file:
+
+ ```bash
+purchase_type: on_demand
+subnet_id: subnet-XXXX
+num_instances: 1
+key_name: XXXXX-keypair
+security_group_ids: sg-XXXXX
+instance_type: m4.large
+tag_name: spark-cluster
+vol_size: 100
+role: master
+use_eips: true
+
+ ```
+
+Then start the cluster
+
+```bash
+peg fetch spark-cluster && peg start spark-cluster && peg service spark-cluster spark start
+```
+
+If needed, ```eval `ssh-agent -s` ``` and run the start line again 
+
+Next, ssh into your master node with 
+```bash
+peg ssh spark-cluster 1
+```
+
+To stop the cluster, use
+
+```bash
+peg fetch spark-cluster && peg service spark-cluster spark stop && peg stop spark-cluster
+```
+
 
 #### PostgreSQL setup
 
@@ -34,6 +70,10 @@ For installation and configuration, refer to: [create an EC2 instance and instal
 ### Running Spark
 
 For command line instructions, refer to the `docs/spark_run.txt` file
+
+## Author
+
+Franco J. Williams
 
 
 
