@@ -1,3 +1,4 @@
+
 # Comparing stocks across time 
 > Learning from history to gain insight
 
@@ -33,6 +34,7 @@ For installation and configuration, please refer to the `docs/postgres_install.t
 For installation and configuration, refer to: [create an EC2 instance and install a web server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateWebServer.html)
 
 ###
+
 
 
 
