@@ -5,7 +5,7 @@ This project has been completed as part of the Insight Data Engineering Program 
 
 ## Context
 
-This project aims to obtain useful information about the stock prices of companies, by comparing them against one another in different time scales. The main idea is that by understanding behaviour in the past, even when the future is unpredictable, we can gather insight from past data to assess our stocks. More concretely, we want to calculate correlations of stocks in different time scales and find where those correlations are highest (i.e. closest to 1). 
+This project aims to obtain useful information about the stock prices of companies, by comparing them against one another in different time scales. The main idea is that by understanding behaviour in the past, even when the future is unpredictable, we can gather insight from to assess our stocks in the present. More concretely, we want to calculate correlations of stocks in different time scales and find where those correlations are highest (i.e. closest to 1), where one stock is the one being considered and the other used as a benchmark.
 
 ## Pipeline 
 
