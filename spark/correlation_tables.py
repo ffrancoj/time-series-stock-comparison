@@ -149,6 +149,7 @@ def correlation_lists(list1, list2, num_weeks):
 def correlation_date_value(df1, df2, start_date, end_date, num_of_weeks):
     """
     Returns a list with a the maximum correlation in the period start_date to end_date, going back
+    
     :type df1         : Spark DataFrame         DataFrame of stock prices
     :type df2         : Spark DataFrame         DataFrame of stock prices
     :type start_date  : datetime                from start_date
@@ -172,6 +173,7 @@ def correlation_date_default(date_default):
 def table_of_corrs(table, stock1, stock2, df1, df2, list_weeks, list_windows, date_end, date_default):
     """
     Returns a list of lists (a table) consisting of the stock correlations running over all the parameters
+    
     :type table       : list              List of correlations 
     :type stock1      : str               stock ticker name
     :type stock2      : str               stock ticker name

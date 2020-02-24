@@ -38,7 +38,9 @@ def main_method(list_stocks, list_weeks, list_windows, date_end, date_default, u
 
 
 if "__name__" == "__main__":
+    
     """Using the global parameters in settings."""
+    
     params = st.parameters_correlation
     info = st.info_database
     main_method(params[0],params[1],params[2],params[3],params[4],info[0], info[1], info[2], info[3])
