@@ -2,7 +2,7 @@
 # Comparing stocks across time 
 > Learning from history to gain insight
 
-This project has been completed as part of the Insight Data Engineering Program (NYC, Winter 2020). Visit the [website](http://www.dataandmore.me) to see the project live. 
+This project has been completed as part of the Insight Data Engineering Program (NYC, Winter 2020). Visit the website [here](http://www.dataandmore.me) to see the project live. 
 
 ## Context
 
